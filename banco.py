@@ -1,38 +1,48 @@
-nombre = input("Ingrese su usuario: ")
-contraseña = input("Ingrese su contraseña: ")
-if nombre == "" or contraseña == "":
-    print("Por favor, complete todos los campos.")
-    exit()
-print("Bienevenido", nombre, "a tu app bancaria")
+
+fondos = 2000  # Inicialización correcta fuera del condicional
+nombre = input("Ingrese su nombre: ")
+print("Bienvenido", nombre, "a tu app bancaria")
 print("-----------Menú Principal-----------")
-print("1. Consultar saldo")
-print("2. Retirar dinero")
-print("3. Depositar dinero")
-print("4. Transferir dinero")
-print("5. Salir")
-opcion = int(input("Seleccione una opción: "))
-fondos = 2000
-if opcion == 1:
-    print("Su saldo es de:", fondos, "USD")
-elif opcion == 2:
-    retirar = int(input("¿Cuánto dinero desea retirar? "))
-    if retirar > fondos:
-        print("No tiene suficiente saldo.")
-    else:
-        fondos -= retirar
-        print("Su nuevo saldo es de: ", fondos, "USD")
-elif opcion == 3:  
-    depositar = int(input("¿Cuánto dinero desea depositar? "))
-    fondos += depositar
-    print("Su nuevo saldo es de:", fondos, "USD")
-elif opcion == 4:
-    transferir = int(input("¿Cuánto dinero desea transferir? "))
-    if transferir > fondos:
-        print("No tiene suficiente saldo.")
-    else:
-        fondos -= transferir
-        print("Su nuevo saldo es de: ", fondos, "USD")
-elif opcion == 5:
-    print("Gracias por usar la app bancaria.")
-else:
-    print("Opción inválida. Por favor, seleccione una opción válida.")
+def menu():
+    fondos = fondos  # Declaramos fondos como global
+    op1 = print("1: Consultar saldo")
+    op2 = print("2: Retirar dinero")
+    op3 = print("3: Depositar dinero")
+    op4 = print("4: Transferir dinero")
+    op5 = print("5: Salir")
+    print("Seleccione una opción: ")
+    opcion = input()
+    if opcion == op1:
+        print("Su saldo es de: ", fondos)
+        menu()
+    elif opcion == op2:
+        print("¿Cuánto desea retirar?")
+        retirar = int(input())
+        if retirar > fondos:
+            print("No tiene suficiente saldo")
+            menu()
+        else:
+            fondos -= retirar
+            print("Su nuevo saldo es de: ", fondos)
+            menu()
+    elif opcion == op3:
+        print("¿Cuánto desea depositar?")
+        depositar = int(input())
+        fondos += depositar
+        print("Su nuevo saldo es de: ", fondos)
+        menu() 
+    elif opcion == op4:
+        print("¿Cuánto desea transferir?")
+        transferir = int(input())
+        if transferir > fondos:
+            print("No tiene suficiente saldo")
+            menu()
+        else:
+            fondos -= transferir
+            print("Su nuevo saldo es de: ", fondos)
+            menu()
+    elif opcion == op5:
+        print("Gracias por usar la app bancaria")
+        exit()
+
+menu()  # Llamada inicial a la función
