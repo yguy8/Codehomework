@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 nombre = input("Ingrese su usuario: ")
 contrasena = input("Ingrese su contraseña: ")
-if nombre == "" or contraseña == "":
+if nombre == "" or contrasena == "":
     print("Por favor, complete todos los campos.")
     exit()
 print("Bienevenido", nombre, "a tu app bancaria")
@@ -37,4 +37,4 @@ elif opcion == 5:
     print("Gracias por usar la app bancaria.")
 else:
     print("Opción inválida. Por favor, seleccione una opción válida.")
-
+    
