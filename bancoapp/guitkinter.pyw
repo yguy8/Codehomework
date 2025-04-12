@@ -4,7 +4,7 @@ app=Tk()
 app.title("Aguila Real")
 
 #El icono debe estar en la carpeta 
-app.iconbitmap("nombre.ico)
+app.iconbitmap("descarga.ico)
 app.geometry("350x650")
 #Esto siempre debe estar al última 
 app.mainloop()
