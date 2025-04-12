@@ -1,10 +1,11 @@
 body {
-    background-color: #7356db;
+    background-color: #59cc7f;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100vh;
     margin: 0;
-    padding: 0
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 
@@ -12,36 +13,82 @@ header {
     /*aquí va el h1 del AGUILA REAL*/
     letter-spacing: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #7e8e7ef9;
-    color: rgb(47, 0, 255);
+    background-color: #59cc7f;
+    color: rgb(133, 137, 5);
     text-align: center;
     padding: 10px 0;
 }
+
 /*Principio del formulario*/
 form {
+    font-family: Arial, Helvetica, sans-serif;
     width: 160px;
-    height: 500px;
-    background-color: #1e9002;
+    height: 200px;
+    background-color: #59cc7f;
     padig-top: 30px;
     margin: 70px auto;
 }
 
-h4{
-    
-}
-h6{
-    color: #027290;
-    text-aling: right;
+/*Todolos los h */
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0a0a0a;
+    text-align: center;
 }
 
-input{}
-label{}
+h4 {
+    padding-top: 20px;
+    color: #cff4ef;
+    text-align: center;
+}
+
+h6 {
+    color: #15acd6;
+    box-sizing: right;
+}
+
+/*Fin de los h*/
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+label {
+    color: #0a0a0a;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
 
 /*Fin del diseño de formulario*/
+
+a {
+    text-decoration: none;
+    color: rgb(215, 250, 235);
+}
+
+a:hover {
+    color: #110627;
+    text-decoration: none;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:active {
+    color: rgb(167, 110, 4);
+}
+
 footer {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #8d938f;
-    color: rgba(7, 69, 255, 0.858);
+    background-color: #59cc7f;
+    color: rgb(3, 7, 47);
     text-align: center;
     padding: 10px 0;
     position: fixed;
