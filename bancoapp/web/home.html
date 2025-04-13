@@ -5,9 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" href="descarga.ico" type="image/x-icon">
+    <script src="login.js"></script>
+    <style>
+        body {
+            background-color: #59cc7f;
+        }
+
+        header {
+            color: azure;
+            text-shadow: #0a0a0a 2px 2px 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        input {
+            width: 70%;
+            margin: 25px 25px 25px 25px;
+            border: none;
+            background: #f1f1f1;
+            border-radius: 5px;
+            display: flex;
+        }
+
+        input[type="button"] {
+            width: 50%;
+            margin: auto;
+            background-color: #59cc7f;
+            color: #0a0a0a;
+            border: dotted 2px #0a0a0a;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0a0a0a;
+            color: #59cc7f;
+        }
+
+        label {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            color: #110627;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+    </style>
 </head>
+<header>Bienvenido a su cuenta</header>
 
 <body>
+    <h2>¿Qué desea hacer hoy?</h2>
+    <label for="opciones">Seleccione una opción:</label>
+
+    <form action="" class="consultar">
+        <label for="consultar">Consultar Saldo </label>
+        <input type="button" value="Consultar" placeholder="fondos" id="money" onclick="location.href='saldo.html'">
+    </form>
+    <form action="" class="transferir">
+        <label for="transferir">Transferir Fondos </label>
+        <input type="text" placeholder="cuenta destino" id="cuenta">
+        <input type="tel" placeholder="$" id="fondo">
+        <input type="button" value="Transferir" onclick="location.href='home.html'">
+    </form>
+
+    <form action="" class="retirar">
+        <label for="retirar">Retirar Fondos </label>
+        <input type="tel" placeholder="$" id="fondo">
+        <input type="button" value="Retirar" onclick="location.href='home.html'">
+    </form>
+
+    <form action="" class="depositar">
+        <label for="depositar">Depositar Fondos </label>
+        <input type="tel" placeholder="$" id="fondo">
+        <input type="button" value="Depositar" placeholder="Depositar" id="depositar">
+    </form>
+    <form action="" class="invertir">
+        <label for="depositar">Invertir </label>
+        <input type="tel" placeholder="$" id="invertir">
+        <input type="button" value="Invertir" placeholder="Invertir" id="invertir">
+        <input type="button" value="Ver bolsa" onclick="location.href='inversión.html'">
+    </form>
 
 </body>
 
