@@ -7,6 +7,7 @@
     <title>Banco AGUILA REAL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="descarga.ico" type="image/x-icon">
+    <script src="login.js"></script>
 </head>
 
 <body>
@@ -24,18 +25,20 @@
         <h4>Necesita iniciar sesión para continuar...</h4>
 
         <form action="">
-            <laberl for="">Usuario</laberl>
-            <input type="text" placeholder="Ingrese su usuario" name="Usuario">
-            <laberl for="">Contraseña</laberl>
-            <input type="password" placeholder="Ingrese su contraseña" name="Contraseña">
+            <label for="">Usuario</label>
+            <input type="text" placeholder="Ingrese su usuario" id="Usuario">
+            <label for="">Contraseña</label>
+            <input type="password" placeholder="Ingrese su contraseña" id="Contraseña">
 
-            <input type="button" value="Ingresar">
+            <input type="button" value="Ingresar" onclick="location.href='home.html'">
+            <input type="button" value="Olvide mi contraseña" onclick="location.href='recuperar.html'">
+            <input type="button" value="Registrarse" onclick="location.href='registrar.html'">
         </form>
         <h6><a href="#">Si no tiene una cuenta haga click en resgistrarse</a></h6>
     </main>
     <footer>
         <h5>BANCO AGUILA REAL &#xA9 </h5>
-        <p>Un institución bancaria que es solo para esta GUI</p>
+        <h6>Un institución bancaria que es solo para esta GUI</h6>
     </footer>
 
 </body>
