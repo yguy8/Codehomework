@@ -12,6 +12,13 @@
             background-color: #59cc7f;
         }
 
+        h2 {
+            text-align: center;
+            text-overflow: ellipsis;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: larger;
+        }
+
         header {
             color: azure;
             text-shadow: #0a0a0a 2px 2px 5px;
@@ -23,20 +30,47 @@
         input {
             width: 70%;
             margin: 25px 25px 25px 25px;
+            font-size: 16px;
             border: none;
             background: #f1f1f1;
             border-radius: 5px;
             display: flex;
         }
 
+        input[type="text"],
+        input[type="tel"] {
+            width: 70%;
+            height: 50px;
+            margin: 10px 10px 10px 10px;
+            background-color: #90e6ad;
+            color: #0a0a0a;
+            border: dotted 1px #0a0a0a;
+            border-color: aliceblue;
+
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus {
+            background-color: #ffffff;
+            color: #000000;
+            outline: none;
+        }
+
+        input[type="text"]:hover,
+        input[type="tel"]:hover {
+            background-color: #c6f0c7;
+            color: #000000;
+        }
+
         input[type="button"] {
             width: 50%;
-            margin: auto;
+            height: 50px;
+            margin: 10px 10px 10px 10px;
             background-color: #59cc7f;
             color: #0a0a0a;
-            border: dotted 2px #0a0a0a;
+            border: dotted 1px #0a0a0a;
             border-color: aliceblue;
-            cursor: pointer;
+            cursor: default;
         }
 
         input[type="button"]:hover {
@@ -45,6 +79,7 @@
         }
 
         label {
+            column-gap: 10px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 16px;
             color: #110627;
@@ -53,6 +88,19 @@
             text-align: center;
             display: block;
             margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            background-color: #f1f1f142;
+            border-radius: 5px;
         }
     </style>
 </head>
