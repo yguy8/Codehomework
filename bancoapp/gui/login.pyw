@@ -16,6 +16,7 @@ def ingresar():
         print("Bienvenido al sistema")
     else:
         print("Usuario o contraseña incorrectos")
+    
 
 lbl1 = Label(vent, text="Bienvenido a Aguila Real", fg="black", bg="SpringGreen4",font=("Special Gothic", 17))
 lbl1.place(x=50, y=30, width=250, height=30)
