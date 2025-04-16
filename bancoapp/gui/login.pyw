@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Entry, Button
+from tkinter import Tk, Label, Button, Entry
 
 vent = Tk()
 vent.title("Aguila Real")
@@ -7,16 +7,15 @@ vent.iconbitmap("descarga.ico") # Cambia "descarga.ico" por la ruta de tu icono
 vent.resizable(0, 0)
 vent.geometry("350x520")
 
+
 def ingresar():
     usuario = text1.get()
     contrasena = text2.get()
     print("Usuario:", usuario, "Contraseña:", contrasena)
     if usuario == "admin" and contrasena == "1234":
-        print("Ingreso exitoso")
+        print("Bienvenido al sistema")
     else:
         print("Usuario o contraseña incorrectos")
-
-
 
 lbl1 = Label(vent, text="Bienvenido a Aguila Real", fg="black", bg="SpringGreen4",font=("Special Gothic", 17))
 lbl1.place(x=50, y=30, width=250, height=30)

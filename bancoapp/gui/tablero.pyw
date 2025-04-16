@@ -1,33 +1,42 @@
-from tkinter import Tk, Label, Entry, Button
+from tkinter import Tk, Label, Button, Toplevel
 
-vent = Tk()
-vent.title("Aguila Real")
-vent.config(bg="SpringGreen4")
-vent.iconbitmap("descarga.ico") # Cambia "descarga.ico" por la ruta de tu icono
-vent.resizable(0, 0)
-vent.geometry("350x520")
+vent2 = Tk()
+vent2.title("Aguila Real")
+vent2.config(bg="SpringGreen4")
+vent2.iconbitmap("descarga.ico") # Cambia "descarga.ico" por la ruta de tu icono
+vent2.resizable(0, 0)
+vent2.geometry("350x520")
 
-def retirar():
-    num1 = text1.get()
-    num2 = text2.get()
-    retiro = float(num1) - float(num2) 
-    text3.insert(0,retiro)
+def abrir_nueva_ventana():
+    nueva_ventana = Toplevel(vent2)
+    nueva_ventana.config(bg="SpringGreen4")
+    nueva_ventana.title("Consultar Saldo")
+    nueva_ventana.iconbitmap("descarga.ico") 
+    nueva_ventana.geometry("350x520")
+    etiqueta = Label(nueva_ventana, text="¿Hola, listo para ver tu saldo?", bg="SpringGreen4", font=("Special Gothic", 12))
+    etiqueta.pack(pady=20)
     
+def abrir_segunda_ventana():
+    segunda_ventana = Toplevel(vent2)
+    segunda_ventana.config(bg="SpringGreen4")
+    segunda_ventana.title("Retirar Dinero")
+    segunda_ventana.iconbitmap("descarga.ico")
+    segunda_ventana.geometry("350x520")
+    etiqueta = Label(segunda_ventana, text="¿Hola, listo para retirar dinero?", bg="SpringGreen4", font=("Special Gothic", 12))
+    etiqueta.pack(pady=20)
+
 
 #títulos de la app
-lbl1 = Label(vent, text="Bienvenido a Aguila Real", fg="black", bg="SpringGreen4",font=("Special Gothic", 17))
+lbl1 = Label(vent2, text="Bienvenido a Aguila Real", fg="black", bg="SpringGreen4",font=("Special Gothic", 17))
 lbl1.place(x=50, y=30, width=250, height=30)
-lbl2 = Label(vent, text="¿Qué desea realizar?", fg="white", bg="SpringGreen4",font=("Special Gothic", 12))
+lbl2 = Label(vent2, text="¿Qué desea realizar?", fg="white", bg="SpringGreen4",font=("Special Gothic", 12))
 lbl2.place(x=50, y=90, width=250, height=30)
-
-text1 = Entry(vent, width=20, bg="DarkOliveGreen3", fg="black")
-text1.place(x=50, y=210, width=120, height=50)
-text2 = Entry(vent, width=20, bg="DarkOliveGreen3", fg="black")
-text2.place(x=180, y=210, width=120, height=50)
-btt =Button(vent, text="Retirar", fg="black", bg="SpringGreen4", font=("Special Gothic", 12), command=retirar)
+#botones de la app
+btt =Button(vent2, text="Mostrar saldo", fg="white", bg="SpringGreen4", font=("Special Gothic", 12), command=abrir_nueva_ventana, activeforeground="SpringGreen4", activebackground="white")
 btt.place(x=50, y=150, width=250, height=50)
+btt2 =Button(vent2, text="Retirar dinero", fg="white", bg="SpringGreen4", font=("Special Gothic", 12), command=abrir_segunda_ventana, activeforeground="SpringGreen4", activebackground="white")
+btt2.place(x=50, y=210, width=250, height=50)
+btt3 =Button(vent2, text="Salir", fg="white", bg="SpringGreen4", font=("Special Gothic", 12), command=vent2.destroy, activeforeground="SpringGreen4", activebackground="white")
+btt3.place(x=50, y=270, width=250, height=50)
 
-text3 = Entry(vent, width=20, bg="DarkOliveGreen3", fg="black")
-text3.place(x=50, y=370, width=250, height=50)
-
-vent.mainloop()
+vent2.mainloop()
