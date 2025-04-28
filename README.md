@@ -1,1 +1,18 @@
-Aquí hay de todo tareas de clases, prácticas random e incluso proyectos raros, pero algo bien para prácticar de todo
+# Proyetos de la escuela 
+
+- bancoapp: sitio web de **Aguila Real** (100% falso) solo para prácticas
+- hopper: sacado de __Khan academy__ fue un mini juego que hice en html, css y js
+
+#### Lo demás como lo especifican los archivos son prácticas
+
+
+-------------- NOTA PERSONAL -------------
+
+el dir local se llama proyectos/ el remoto es Codehomework 
+
+-----------------------------------------
+
+
+
+
+
