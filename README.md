@@ -8,7 +8,7 @@
 
 -------------- NOTA PERSONAL -------------
 
-el dir local se llama proyectos/ el remoto es Codehomework 
+el dir local se llama _proyectos/_ el repo es _Codehomework_
 
 -----------------------------------------
 
