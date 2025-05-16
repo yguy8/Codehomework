@@ -3,7 +3,7 @@ from tkinter import Tk, Label, Button, Toplevel
 vent2 = Tk()
 vent2.title("Aguila Real")
 vent2.config(bg="SpringGreen4")
-vent2.iconbitmap("descarga.ico") # Cambia "descarga.ico" por la ruta de tu icono
+#vent2.iconbitmap("descarga.ico") # Cambia "descarga.ico" por la ruta de tu icono
 vent2.resizable(0, 0)
 vent2.geometry("350x520")
 
